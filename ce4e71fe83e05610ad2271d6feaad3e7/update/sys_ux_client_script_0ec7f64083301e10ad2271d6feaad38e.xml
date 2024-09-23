@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">38c7328083301e10ad2271d6feaad3d7</macroponent>
+        <name>Utils</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+
+    console.log(event);
+    console.log(JSON.stringify(api.state));
+
+    var HELLO_WORLD_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "hello_world_button");
+    var CREATE_RECORD_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "create_incident_button");
+    var CREATE_100_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "create_100_button");
+    var GET_TYPES_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "get_types_button");
+    var DELETE_ALL_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "delete_all_button");
+    var DELETE_TYPE_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "delete_type_button");
+    var TRIGGER_FLOW_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "trigger_flow_button");
+    var TRIGGER_WORKFLOW_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "trigger_workflow_button");
+    var ON_CALL_PUSH_NOTIFICATION_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "on_call_push_notification_button");
+    var SEND_CALL_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "send_call_button");
+    var SEND_SMS_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "send_sms_button");
+
+    if (HELLO_WORLD_CLICKED) {
+
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/hello_world', {
+                method: 'GET'
+            })
+            .then(({
+                response
+            }) => {
+
+                api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("hello_world_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
+
+    if (CREATE_RECORD_CLICKED) {
+        console.log('kl in');
+        var recordObject = {};
+        recordObject.short_description = api.state.shortDescriptionValue;
+        recordObject.description = api.state.descriptionValue;
+        recordObject.type = api.state.typeValue;
+        console.log(recordObject);
+        console.log(JSON.stringify(recordObject));
+
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/create_record', {
+                method: 'POST',
+                body: recordObject
+            })
+            .then(({
+                response
+            }) => {
+
+                //api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("create_incident_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+
+    }
+
+    if (CREATE_100_CLICKED) {
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/create_100', {
+                method: 'POST'            
+                })
+            .then(({
+                response
+            }) => {
+
+                helpers.modal.open("create_100_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
+
+    if (GET_TYPES_CLICKED) {
+        console.log('kl in get types');
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/get_types', {
+                method: 'GET'            
+                })
+            .then(({
+                response
+            }) => {
+                api.setState('getTypesResponse', response.result);
+                helpers.modal.open("get_types_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
+    
+    if (DELETE_ALL_CLICKED) {
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/delete_all', {
+                method: 'POST'            
+                })
+            .then(({
+                response
+            }) => {
+                helpers.modal.open("delete_all_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
+
+    if (DELETE_TYPE_CLICKED) {
+
+        var recordObjectDel = {};
+        recordObjectDel.type = api.state.deleteTypeValue;
+        console.log(recordObject);
+        console.log(JSON.stringify(recordObject));
+
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/delete_type', {
+                method: 'POST',
+                body: recordObjectDel
+            })
+            .then(({
+                response
+            }) => {
+
+                //api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("delete_type_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+
+    }
+
+    if (TRIGGER_FLOW_CLICKED) {
+        var flowObj = {};
+        flowObj.flow = api.state.flow;
+
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/trigger_flow', {
+                method: 'POST',
+                body: flowObj
+            })
+            .then(({
+                response
+            }) => {
+
+                //api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("trigger_flow_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+
+    }
+
+    if (TRIGGER_WORKFLOW_CLICKED) {
+        console.log('klklkl');
+        var workflowObj = {};
+        workflowObj.workflow = api.state.workflow;
+        console.log('workflowObj: ' + JSON.stringify(workflowObj));
+
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/trigger_workflow', {
+                method: 'POST',
+                body: workflowObj
+            })
+            .then(({
+                response
+            }) => {
+
+                //api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("trigger_workflow_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
+
+    if (ON_CALL_PUSH_NOTIFICATION_CLICKED) {
+        var pushObj = {};
+        pushObj.acceptor = api.state.acceptor;
+        pushObj.number = api.state.number;
+        console.log('pushObj: ' + JSON.stringify(workflowObj));
+
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/on_call_push_notification', {
+                method: 'POST',
+                body: pushObj
+            })
+            .then(({
+                response
+            }) => {
+
+                //api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("on_call_push_notification_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
+
+    if (SEND_CALL_CLICKED) {
+        var phoneObj = {};
+        phoneObj.phone_number = api.state.phonePhoneNumber;
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/send_call', {
+                method: 'POST',
+                body: phoneObj
+            })
+            .then(({
+                response
+            }) => {
+
+                //api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("send_call_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
+
+    if (SEND_SMS_CLICKED) {
+        var smsObj = {};
+        smsObj.phone_number = api.state.smsPhoneNumber;
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/send_sms', {
+                method: 'POST',
+                body: smsObj
+            })
+            .then(({
+                response
+            }) => {
+
+                //api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("send_sms_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-17 21:00:04</sys_created_on>
+        <sys_id>0ec7f64083301e10ad2271d6feaad38e</sys_id>
+        <sys_mod_count>63</sys_mod_count>
+        <sys_name>Utils</sys_name>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_update_name>sys_ux_client_script_0ec7f64083301e10ad2271d6feaad38e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-17 22:47:03</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

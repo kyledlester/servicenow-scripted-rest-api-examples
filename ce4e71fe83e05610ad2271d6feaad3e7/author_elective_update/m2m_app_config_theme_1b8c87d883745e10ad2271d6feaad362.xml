@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="DELETE">
+        <applicability/>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-18 16:58:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1b8c87d883745e10ad2271d6feaad362</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_update_name>m2m_app_config_theme_1b8c87d883745e10ad2271d6feaad362</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-18 16:58:07</sys_updated_on>
+        <theme display_value="Portal UI Template Theme">de0b852eb0c88210f8774b320398b659</theme>
+        <ux_app_configuration display_value="Scripted REST API Explorer Playground">e4a73a4083301e10ad2271d6feaad3ff</ux_app_configuration>
+    </m2m_app_config_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</application>
+        <file_path/>
+        <instance_id>8a9500d5eb77429056eafddacad0cde9</instance_id>
+        <instance_name>dev285494</instance_name>
+        <name>m2m_app_config_theme_1b8c87d883745e10ad2271d6feaad362</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme"><m2m_app_config_theme action="INSERT_OR_UPDATE"><applicability/><order>0</order><sys_class_name>m2m_app_config_theme</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-09-18 16:58:07</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1b8c87d883745e10ad2271d6feaad362</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package><sys_policy/><sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope><sys_update_name>m2m_app_config_theme_1b8c87d883745e10ad2271d6feaad362</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-09-18 16:58:07</sys_updated_on><theme display_value="Portal UI Template Theme">de0b852eb0c88210f8774b320398b659</theme><ux_app_configuration display_value="Scripted REST API Explorer Playground">e4a73a4083301e10ad2271d6feaad3ff</ux_app_configuration></m2m_app_config_theme></record_update>]]></payload>
+        <payload_hash>545879765</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>4a4eb1ba83e45610ad2271d6feaad30e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-18 16:58:07</sys_created_on>
+        <sys_id>5f8c87d883745e10ad2271d6feaad365</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1920611de8d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-18 16:58:07</sys_updated_on>
+        <type>UX App Theme</type>
+        <update_guid>538c87d834745e1098624b83e4ee1265</update_guid>
+        <update_guid_history>538c87d834745e1098624b83e4ee1265:545879765</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">399c43d883745e10ad2271d6feaad374</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-18 16:58:17</sys_created_on>
+        <sys_db_object display_value="" name="m2m_app_config_theme">m2m_app_config_theme</sys_db_object>
+        <sys_id>00363f7f0d984b0c800084bbcf9cbca9</sys_id>
+        <sys_metadata>1b8c87d883745e10ad2271d6feaad362</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_scope_delete display_value="">16f7133eaaf040f4babb159359de8810</sys_scope_delete>
+        <sys_update_name>m2m_app_config_theme_1b8c87d883745e10ad2271d6feaad362</sys_update_name>
+        <sys_update_version display_value="m2m_app_config_theme_1b8c87d883745e10ad2271d6feaad362">5f8c87d883745e10ad2271d6feaad365</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-18 16:58:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

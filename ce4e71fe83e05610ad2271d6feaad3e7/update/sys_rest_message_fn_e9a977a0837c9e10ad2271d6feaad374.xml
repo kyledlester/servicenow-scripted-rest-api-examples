@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+    "text": "Danny Torrence left a 1 star review for your property.",&#13;
+    "blocks": [&#13;
+    	{&#13;
+    		"type": "section",&#13;
+    		"text": {&#13;
+    			"type": "mrkdwn",&#13;
+    			"text": "Danny Torrence left the following review for your property:"&#13;
+    		}&#13;
+    	},&#13;
+{&#13;
+    		"type": "section",&#13;
+    		"text": {&#13;
+    			"type": "mrkdwn",&#13;
+    			"text": "Danny Torrence left the following review for your property:"&#13;
+    		}&#13;
+    	},&#13;
+    	{&#13;
+    		"type": "section",&#13;
+    		"block_id": "section567",&#13;
+    		"text": {&#13;
+    			"type": "mrkdwn",&#13;
+    			"text": "&lt;https://example.com|Overlook Hotel&gt; \n :star: \n Doors had too many axe holes, guest in room 237 was far too rowdy, whole place felt stuck in the 1920s."&#13;
+    		},&#13;
+    		"accessory": {&#13;
+    			"type": "image",&#13;
+    			"image_url": "https://is5-ssl.mzstatic.com/image/thumb/Purple3/v4/d3/72/5c/d3725c8f-c642-5d69-1904-aa36e4297885/source/256x256bb.jpg",&#13;
+    			"alt_text": "Haunted hotel image"&#13;
+    		}&#13;
+    	},&#13;
+    	{&#13;
+    		"type": "section",&#13;
+    		"block_id": "section789",&#13;
+    		"fields": [&#13;
+    			{&#13;
+    				"type": "mrkdwn",&#13;
+    				"text": "*Average Rating*\n1.0"&#13;
+    			}&#13;
+    		]&#13;
+    	}&#13;
+    ]&#13;
+}</content>
+        <function_name>POST</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Slack [ POST ]</qualified_name>
+        <rest_endpoint>${endpoint}</rest_endpoint>
+        <rest_message display_value="Slack">aa7977a0837c9e10ad2271d6feaad310</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-19 14:53:38</sys_created_on>
+        <sys_id>e9a977a0837c9e10ad2271d6feaad374</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>POST</sys_name>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_update_name>sys_rest_message_fn_e9a977a0837c9e10ad2271d6feaad374</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-19 15:27:52</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

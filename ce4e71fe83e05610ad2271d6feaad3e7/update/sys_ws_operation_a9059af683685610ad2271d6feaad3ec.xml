@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>create_record</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    let shortDescription = request.body.data.short_description;
+    let description = request.body.data.description;
+    let type = request.body.data.type;
+
+    var create = new GlideRecord('x_0294_rest_api_scripted_rest_api_basic_app');
+    create.initialize();
+    create.setValue('short_description', shortDescription);
+    create.setValue('description', description);
+    create.setValue('type', type);
+    create.insert();
+
+    response.setStatus('201');
+    response.setContentType('application/json');
+
+    var resBody = {};
+    resBody.information = "Record successfully created.";
+    resBody.sys_id = create.sys_id.toString();
+    response.setBody(resBody);
+
+
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_0294_rest_api/scripted_rest_api_examples/create_record</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/create_record</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-13 21:05:00</sys_created_on>
+        <sys_id>a9059af683685610ad2271d6feaad3ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>create_record</sys_name>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_update_name>sys_ws_operation_a9059af683685610ad2271d6feaad3ec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-13 21:05:00</sys_updated_on>
+        <web_service_definition display_value="Scripted REST API Examples">d9e40ab283285610ad2271d6feaad37c</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a9059af683685610ad2271d6feaad3ec</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-13 21:05:00</sys_created_on>
+        <sys_id>cf159af683685610ad2271d6feaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-13 21:05:00</sys_updated_on>
+        <table>sys_ws_operation</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

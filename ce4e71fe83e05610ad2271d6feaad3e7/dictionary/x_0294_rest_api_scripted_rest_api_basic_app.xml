@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a136063683285610ad2271d6feaad3b0" label="Scripted REST API Basic App" max_length="40" name="x_0294_rest_api_scripted_rest_api_basic_app" type="collection">
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Type C" sequence="2" value="type_c"/>
+                <element inactive_on_update="false" label="Type B" sequence="1" value="type_b"/>
+                <element inactive_on_update="false" label="Type A" sequence="0" value="type_a"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="2000" name="description" type="string"/>
+        <element label="Short Description" max_length="200" name="short_description" type="string"/>
+    </element>
+</database>

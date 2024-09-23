@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Scripted REST API Basic App" language="en" table="x_0294_rest_api_scripted_rest_api_basic_app">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Scripted REST API Basic App</label>
+            <language>en</language>
+            <name>x_0294_rest_api_scripted_rest_api_basic_app</name>
+            <plural>Scripted REST API Basic Apps</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-09-13 20:00:10</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Scripted REST API Basic App</sys_name>
+            <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+            <sys_update_name>sys_documentation_x_0294_rest_api_scripted_rest_api_basic_app__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-09-13 20:00:10</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

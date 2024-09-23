@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_push_notification">
+    <sys_sg_push_notification action="DELETE">
+        <actionable>false</actionable>
+        <category/>
+        <name>Hello World</name>
+        <screen display_value="My incidents">2b1040b1533a33007bc2ddeeff7b1219</screen>
+        <sys_class_name>sys_sg_push_notification</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-17 18:45:20</sys_created_on>
+        <sys_id>f26b1644837cda10ad2271d6feaad3b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hello World</sys_name>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_update_name>sys_sg_push_notification_f26b1644837cda10ad2271d6feaad3b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-17 18:45:20</sys_updated_on>
+    </sys_sg_push_notification>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</application>
+        <file_path/>
+        <instance_id>8a9500d5eb77429056eafddacad0cde9</instance_id>
+        <instance_name>dev285494</instance_name>
+        <name>sys_sg_push_notification_f26b1644837cda10ad2271d6feaad3b8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_push_notification"><sys_sg_push_notification action="INSERT_OR_UPDATE"><actionable>false</actionable><category/><name>Hello World</name><screen display_value="My incidents">2b1040b1533a33007bc2ddeeff7b1219</screen><sys_class_name>sys_sg_push_notification</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-09-17 18:45:20</sys_created_on><sys_id>f26b1644837cda10ad2271d6feaad3b8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Hello World</sys_name><sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package><sys_policy/><sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope><sys_update_name>sys_sg_push_notification_f26b1644837cda10ad2271d6feaad3b8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-09-17 18:45:20</sys_updated_on></sys_sg_push_notification></record_update>]]></payload>
+        <payload_hash>-1666311672</payload_hash>
+        <record_name>Hello World</record_name>
+        <reverted_from/>
+        <source>4a4eb1ba83e45610ad2271d6feaad30e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-17 18:45:20</sys_created_on>
+        <sys_id>c88b9ec0837cda10ad2271d6feaad3a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192014dab5e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-17 18:45:20</sys_updated_on>
+        <type>Push Notification</type>
+        <update_guid>8c8b9ec08b7cda10362b7bbbe37eee9f</update_guid>
+        <update_guid_history>8c8b9ec08b7cda10362b7bbbe37eee9f:-1666311672</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-17 19:39:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_push_notification">sys_sg_push_notification</sys_db_object>
+        <sys_id>bb3a851501424aa09c6d7d8681ed0240</sys_id>
+        <sys_metadata>f26b1644837cda10ad2271d6feaad3b8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hello World</sys_name>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_scope_delete display_value="">16f7133eaaf040f4babb159359de8810</sys_scope_delete>
+        <sys_update_name>sys_sg_push_notification_f26b1644837cda10ad2271d6feaad3b8</sys_update_name>
+        <sys_update_version display_value="sys_sg_push_notification_f26b1644837cda10ad2271d6feaad3b8">c88b9ec0837cda10ad2271d6feaad3a0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-17 19:39:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

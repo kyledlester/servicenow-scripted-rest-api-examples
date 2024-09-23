@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_push_notif_msg_content">
+    <sys_push_notif_msg_content action="INSERT_OR_UPDATE">
+        <name>Test</name>
+        <push_app display_value="ServiceNow Mobile Application">05ed2fb177002300258da2e2c81061c2</push_app>
+        <script><![CDATA[(function buildJSON(/*GlideRecord*/ current, /*String*/ message, /*Object*/ attributes) {
+
+  var layoutFields = {"Identifier" : "number", "Description" : "short_description", "Status" : "state" };
+  return new global.ActionablePushPayloadBuilder(current, "f26b1644837cda10ad2271d6feaad3b8", layoutFields).buildJSON(); 
+
+})(current, message, attributes);]]></script>
+        <sys_class_name>sys_push_notif_msg_content</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-17 18:45:38</sys_created_on>
+        <sys_id>d18bd644837cda10ad2271d6feaad317</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_update_name>sys_push_notif_msg_content_d18bd644837cda10ad2271d6feaad317</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-17 18:45:38</sys_updated_on>
+    </sys_push_notif_msg_content>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>d18bd644837cda10ad2271d6feaad317</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-17 18:45:38</sys_created_on>
+        <sys_id>a89b9644837cda10ad2271d6feaad379</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-17 18:45:38</sys_updated_on>
+        <table>sys_push_notif_msg_content</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

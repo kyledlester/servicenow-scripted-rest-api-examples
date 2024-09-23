@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_registry">
+    <sys_ux_page_registry action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_panel>e4a73a4083301e10ad2271d6feaad3ff</admin_panel>
+        <admin_panel_table>sys_ux_app_config</admin_panel_table>
+        <auth_routes/>
+        <page/>
+        <parent_app display_value="UXR Base Unified App">c4b650c2c702201072b211d4d8c260a4</parent_app>
+        <path>scripted-rest-api-explorer-playground</path>
+        <root_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</root_macroponent>
+        <sys_class_name>sys_ux_page_registry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-17 20:48:14</sys_created_on>
+        <sys_id>a8a7be4083301e10ad2271d6feaad310</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Scripted REST API Explorer Playground</sys_name>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_update_name>sys_ux_page_registry_a8a7be4083301e10ad2271d6feaad310</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-17 20:48:14</sys_updated_on>
+        <title>Scripted REST API Explorer Playground</title>
+    </sys_ux_page_registry>
+</record_update>

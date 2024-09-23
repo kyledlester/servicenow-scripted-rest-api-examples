@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_push_notif_app_install">
+    <sys_push_notif_app_install action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <last_registered_on>2024-09-20 13:38:29</last_registered_on>
+        <send_badge_count>false</send_badge_count>
+        <sys_class_name>sys_push_notif_app_install</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-09-17 18:23:27</sys_created_on>
+        <sys_id>eb769ac0833cda10ad2271d6feaad3a3</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>cnS_WZ2LTLGHay55huOMJA:APA91bEyMo92-orb2aipmau__vrJ1iQZY5AljJ98qvF1UOO7d6Tzldg_3Pxi8q1oBqVwA4iHTcP_uZ-0el6T0pBSam-kD5AWIV0LEHG7_L8hl2TSjhncSIM5AQDSZ833M58-pg2Mf8Xf</sys_name>
+        <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
+        <sys_policy/>
+        <sys_push_application_id display_value="ServiceNow Mobile Application">05ed2fb177002300258da2e2c81061c2</sys_push_application_id>
+        <sys_push_platform_id display_value="Google">53e75f30ff0002009738ffffffffff12</sys_push_platform_id>
+        <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
+        <sys_update_name>sys_push_notif_app_install_eb769ac0833cda10ad2271d6feaad3a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-09-20 13:38:29</sys_updated_on>
+        <sys_user_id display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user_id>
+        <token>cnS_WZ2LTLGHay55huOMJA:APA91bEyMo92-orb2aipmau__vrJ1iQZY5AljJ98qvF1UOO7d6Tzldg_3Pxi8q1oBqVwA4iHTcP_uZ-0el6T0pBSam-kD5AWIV0LEHG7_L8hl2TSjhncSIM5AQDSZ833M58-pg2Mf8Xf</token>
+    </sys_push_notif_app_install>
+</record_update>
