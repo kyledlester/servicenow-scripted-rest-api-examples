@@ -34,6 +34,8 @@ function handler({
     var ON_CALL_PUSH_NOTIFICATION_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "on_call_push_notification_button");
     var SEND_CALL_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "send_call_button");
     var SEND_SMS_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "send_sms_button");
+    var TEST_SLACK_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "test_slack_button");
+    var SLACK_INCIDENT_CLICKED = (event.name === "NOW_BUTTON#CLICKED" && event.elementId === "slack_incident_button");
 
     if (HELLO_WORLD_CLICKED) {
 
@@ -141,7 +143,7 @@ function handler({
     if (DELETE_TYPE_CLICKED) {
 
         var recordObjectDel = {};
-        recordObjectDel.type = api.state.deleteTypeValue;
+        recordObjectDel.type = api.state.typeValue;
         console.log(recordObject);
         console.log(JSON.stringify(recordObject));
 
@@ -282,20 +284,65 @@ function handler({
                 console.error('Error: ' + message);
             });
     }
+
+    if (TEST_SLACK_CLICKED) {
+        console.log('kl in');
+        var testSlackObj = {};
+        testSlackObj.endpoint = api.state.slackEndpoint;
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/slack_test', {
+                method: 'POST',
+                body: testSlackObj
+            })
+            .then(({
+                response
+            }) => {
+
+                //api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("test_slack_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
+    if (SLACK_INCIDENT_CLICKED) {
+        var slackObj = {};
+        slackObj.endpoint = api.state.slackEndpoint;
+        slackObj.incident = api.state.slackIncident;
+        helpers.snHttp('/api/x_0294_rest_api/scripted_rest_api_examples/slack_incident', {
+                method: 'POST',
+                body: slackObj
+            })
+            .then(({
+                response
+            }) => {
+
+                //api.setState('helloWorldResponse', response.result);
+                helpers.modal.open("slack_incident_response");
+            })
+            .catch(({
+                error
+            }) => {
+                const message = `Error: ${error.data.error.message}`;
+                console.error('Error: ' + message);
+            });
+    }
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-17 21:00:04</sys_created_on>
         <sys_id>0ec7f64083301e10ad2271d6feaad38e</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>79</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ux_client_script_0ec7f64083301e10ad2271d6feaad38e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-17 22:47:03</sys_updated_on>
+        <sys_updated_on>2024-09-25 17:01:42</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

@@ -2158,20 +2158,20 @@
                 },
                 {
                     "definition": {
-                        "id": "d667a5e769598b2e5c6e92ebe73394f6",
+                        "id": "8592cf18d86865b5e96975a1294ed7a4",
                         "type": "MACROPONENT"
                     },
-                    "elementId": "textarea_1",
-                    "elementLabel": "Textarea 1",
+                    "elementId": "select_2",
+                    "elementLabel": "Select 2",
                     "eventMappings": [
                         {
-                            "eventMappingId": "cmbbggyffdddjjaabbggjjddbiiddiytbbieqc",
+                            "eventMappingId": "cmbbiigiifghaabbedddbiiddeehhjjxlffto",
                             "isConfiguration": false,
                             "offRowStorageId": null,
-                            "sourceEventApiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                            "sourceEventApiName": "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
                             "sourceEventCorrelationId": null,
                             "sourceEventDefinition": {
-                                "apiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                                "apiName": "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
                                 "id": null,
                                 "type": "UXEVENT"
                             },
@@ -2188,7 +2188,7 @@
                                             "container": {
                                                 "propName": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": "deleteTypeValue"
+                                                    "value": "typeValue"
                                                 },
                                                 "value": {
                                                     "binding": {
@@ -2204,7 +2204,7 @@
                                         "sysId": "32408b42ff7a10109046e490703bf176"
                                     },
                                     "operation": null,
-                                    "targetId": "cmbbggyffdddaaabbggaddbiiddjjdgfahhjs",
+                                    "targetId": "cmbbiigiifghaabbeeddbiiddhavtbffhhc",
                                     "type": "EVENT"
                                 }
                             ]
@@ -2220,37 +2220,13 @@
                             "type": "JSON_LITERAL",
                             "value": null
                         },
-                        "autoresize": {
-                            "type": "JSON_LITERAL",
-                            "value": true
-                        },
-                        "autoresizeRowsLimit": {
-                            "type": "JSON_LITERAL",
-                            "value": null
-                        },
-                        "color": {
-                            "type": "JSON_LITERAL",
-                            "value": "initial"
-                        },
-                        "cols": {
-                            "type": "JSON_LITERAL",
-                            "value": null
-                        },
                         "configAria": {
-                            "type": "JSON_LITERAL",
-                            "value": null
-                        },
-                        "disableMaxHeight": {
                             "type": "JSON_LITERAL",
                             "value": null
                         },
                         "disabled": {
                             "type": "JSON_LITERAL",
-                            "value": false
-                        },
-                        "enableCaretSlot": {
-                            "type": "JSON_LITERAL",
-                            "value": false
+                            "value": null
                         },
                         "fieldLayout": {
                             "type": "JSON_LITERAL",
@@ -2270,6 +2246,66 @@
                             "type": "JSON_LITERAL",
                             "value": false
                         },
+                        "items": {
+                            "container": [
+                                {
+                                    "container": {
+                                        "id": {
+                                            "type": "JSON_LITERAL",
+                                            "value": "type_a"
+                                        },
+                                        "label": {
+                                            "type": "TRANSLATION_LITERAL",
+                                            "value": {
+                                                "code": null,
+                                                "comment": "",
+                                                "message": "Type A"
+                                            }
+                                        }
+                                    },
+                                    "type": "MAP_CONTAINER"
+                                },
+                                {
+                                    "container": {
+                                        "id": {
+                                            "type": "JSON_LITERAL",
+                                            "value": "type_b"
+                                        },
+                                        "label": {
+                                            "type": "TRANSLATION_LITERAL",
+                                            "value": {
+                                                "code": null,
+                                                "comment": "",
+                                                "message": "Type B"
+                                            }
+                                        }
+                                    },
+                                    "type": "MAP_CONTAINER"
+                                },
+                                {
+                                    "container": {
+                                        "id": {
+                                            "type": "JSON_LITERAL",
+                                            "value": "type_c"
+                                        },
+                                        "label": {
+                                            "type": "TRANSLATION_LITERAL",
+                                            "value": {
+                                                "code": null,
+                                                "comment": "",
+                                                "message": "Type C"
+                                            }
+                                        }
+                                    },
+                                    "type": "MAP_CONTAINER"
+                                }
+                            ],
+                            "type": "LIST_CONTAINER"
+                        },
+                        "itemsListConstrain": {
+                            "type": "JSON_LITERAL",
+                            "value": {}
+                        },
                         "label": {
                             "type": "TRANSLATION_LITERAL",
                             "value": {
@@ -2286,61 +2322,37 @@
                             "type": "JSON_LITERAL",
                             "value": false
                         },
-                        "manageValue": {
+                        "manageSelectedItem": {
                             "type": "JSON_LITERAL",
                             "value": false
-                        },
-                        "maxlength": {
-                            "type": "JSON_LITERAL",
-                            "value": null
                         },
                         "messages": {
                             "type": "JSON_LITERAL",
                             "value": "[]"
                         },
-                        "minlength": {
-                            "type": "JSON_LITERAL",
-                            "value": null
-                        },
-                        "name": {
-                            "type": "JSON_LITERAL",
-                            "value": null
-                        },
                         "optional": {
                             "type": "JSON_LITERAL",
-                            "value": null
-                        },
-                        "placeholder": {
-                            "type": "JSON_LITERAL",
-                            "value": null
+                            "value": false
                         },
                         "readonly": {
                             "type": "JSON_LITERAL",
-                            "value": null
+                            "value": false
                         },
                         "required": {
                             "type": "JSON_LITERAL",
-                            "value": null
+                            "value": false
                         },
-                        "resize": {
+                        "search": {
                             "type": "JSON_LITERAL",
-                            "value": "horizontal"
+                            "value": "none"
                         },
-                        "rows": {
-                            "type": "JSON_LITERAL",
-                            "value": 1
-                        },
-                        "showCounter": {
+                        "selectedItem": {
                             "type": "JSON_LITERAL",
                             "value": null
                         },
                         "size": {
                             "type": "JSON_LITERAL",
-                            "value": "sm"
-                        },
-                        "value": {
-                            "type": "JSON_LITERAL",
-                            "value": null
+                            "value": "md"
                         }
                     },
                     "slot": null,
@@ -2449,10 +2461,12 @@
                             }
                         },
                         {
-                            "element_id": "textarea_1",
+                            "element_id": "select_2",
                             "styles": {
                                 "padding-left": "var(--now-scalable-space--3xl)",
-                                "padding-right": "var(--now-scalable-space--3xl)"
+                                "padding-right": "var(--now-scalable-space--3xl)",
+                                "padding-top": "var(--now-scalable-space--xxs)",
+                                "width": "250px"
                             }
                         },
                         {
@@ -4715,6 +4729,1004 @@
             "id": "d356d14b6e293a3020a244b63d278d8f",
             "type": "MACROPONENT"
         },
+        "elementId": "container_15",
+        "elementLabel": "Container 15",
+        "eventMappings": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "overrides": {
+            "composition": [
+                {
+                    "definition": {
+                        "id": "2d56f06d55f46bbd4e79b5e624beb940",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "rich_text_16",
+                    "elementLabel": "Rich text 16",
+                    "eventMappings": [],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "html": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "&lt;p&gt;&lt;span style=\"font-size: 12pt;\"&gt;&lt;strong&gt;/slack_test&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;"
+                            }
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                },
+                {
+                    "definition": {
+                        "id": "d667a5e769598b2e5c6e92ebe73394f6",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "textarea_23",
+                    "elementLabel": "Textarea 23",
+                    "eventMappings": [
+                        {
+                            "eventMappingId": "cmbbggyffdddjjaabbggjjddbiiddiytbbieqc",
+                            "isConfiguration": false,
+                            "offRowStorageId": null,
+                            "sourceEventApiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                            "sourceEventCorrelationId": null,
+                            "sourceEventDefinition": {
+                                "apiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                                "id": null,
+                                "type": "UXEVENT"
+                            },
+                            "sourceEventSysId": null,
+                            "targets": [
+                                {
+                                    "broker": null,
+                                    "clientScript": null,
+                                    "conditional": null,
+                                    "declarativeAction": null,
+                                    "event": {
+                                        "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                        "payload": {
+                                            "container": {
+                                                "propName": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "slackEndpoint"
+                                                },
+                                                "value": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "value"
+                                                        ]
+                                                    },
+                                                    "type": "EVENT_PAYLOAD_BINDING"
+                                                }
+                                            },
+                                            "type": "MAP_CONTAINER"
+                                        },
+                                        "sysId": "32408b42ff7a10109046e490703bf176"
+                                    },
+                                    "operation": null,
+                                    "targetId": "cmbbggyffdddaaabbggaddbiiddjjdgfahhjs",
+                                    "type": "EVENT"
+                                }
+                            ]
+                        }
+                    ],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "autofocus": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "autoresize": {
+                            "type": "JSON_LITERAL",
+                            "value": true
+                        },
+                        "autoresizeRowsLimit": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "color": {
+                            "type": "JSON_LITERAL",
+                            "value": "initial"
+                        },
+                        "cols": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "configAria": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "disableMaxHeight": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "disabled": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "enableCaretSlot": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "fieldLayout": {
+                            "type": "JSON_LITERAL",
+                            "value": {
+                                "layout": "vertical"
+                            }
+                        },
+                        "helperContent": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "hideRequiredIndicator": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "invalid": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "label": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Slack Endpoint"
+                            }
+                        },
+                        "landmark": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "manageInvalid": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "manageValue": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "maxlength": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "messages": {
+                            "type": "JSON_LITERAL",
+                            "value": "[]"
+                        },
+                        "minlength": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "name": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "optional": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "placeholder": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "readonly": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "required": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "resize": {
+                            "type": "JSON_LITERAL",
+                            "value": "horizontal"
+                        },
+                        "rows": {
+                            "type": "JSON_LITERAL",
+                            "value": 1
+                        },
+                        "showCounter": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "size": {
+                            "type": "JSON_LITERAL",
+                            "value": "sm"
+                        },
+                        "value": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                },
+                {
+                    "definition": {
+                        "id": "d37ce8abca89d02905fed903c8e34d8e",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "test_slack_button",
+                    "elementLabel": "Test Slack Button",
+                    "eventMappings": [
+                        {
+                            "eventMappingId": "cmbbggxccfsddaaaaydddbiiddgijoffwuf",
+                            "isConfiguration": false,
+                            "offRowStorageId": null,
+                            "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                            "sourceEventCorrelationId": null,
+                            "sourceEventDefinition": {
+                                "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                "id": null,
+                                "type": "UXEVENT"
+                            },
+                            "sourceEventSysId": null,
+                            "targets": [
+                                {
+                                    "broker": null,
+                                    "clientScript": {
+                                        "payload": {
+                                            "type": "JSON_LITERAL",
+                                            "value": {}
+                                        },
+                                        "sysId": "0ec7f64083301e10ad2271d6feaad38e"
+                                    },
+                                    "conditional": null,
+                                    "declarativeAction": null,
+                                    "event": null,
+                                    "operation": null,
+                                    "targetId": "cmbbggxccfsddaaaayeddbiiddxuixhbbaan",
+                                    "type": "CLIENT_SCRIPT"
+                                }
+                            ]
+                        }
+                    ],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "configAria": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "disabled": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "icon": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "label": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Execute API"
+                            }
+                        },
+                        "landmark": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "size": {
+                            "type": "JSON_LITERAL",
+                            "value": "md"
+                        },
+                        "tooltipContent": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Pretty self-explanatory..."
+                            }
+                        },
+                        "variant": {
+                            "type": "JSON_LITERAL",
+                            "value": "primary"
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                }
+            ],
+            "layout": {
+                "default": {
+                    "children": null,
+                    "items": [
+                        {
+                            "element_id": "rich_text_16",
+                            "styles": {
+                                "padding-left": "var(--now-scalable-space--3xl)",
+                                "padding-right": "var(--now-scalable-space--3xl)"
+                            }
+                        },
+                        {
+                            "element_id": "textarea_23",
+                            "styles": {}
+                        },
+                        {
+                            "element_id": "test_slack_button",
+                            "styles": {
+                                "padding-left": "var(--now-scalable-space--3xl)",
+                                "padding-right": "var(--now-scalable-space--3xl)",
+                                "padding-top": "var(--now-scalable-space--sm)"
+                            }
+                        }
+                    ],
+                    "root": null,
+                    "rules": null,
+                    "styles": {
+                        "flex-direction": "row",
+                        "padding-bottom": "var(--now-scalable-space--3xl)",
+                        "padding-top": "var(--now-scalable-space--3xl)",
+                        "width": "100%"
+                    },
+                    "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                    "type": "flex"
+                },
+                "version": "3.0.0"
+            }
+        },
+        "preset": null,
+        "propertyValues": {
+            "ariaRegionHeadingLevel": {
+                "type": "JSON_LITERAL",
+                "value": "1"
+            },
+            "ariaRegionName": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": ""
+                }
+            },
+            "ariaRole": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "hideEmptyStateUi": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "includeAriaHeading": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "slotWrapperBehavior": {
+                "type": "JSON_LITERAL",
+                "value": "fullheight"
+            },
+            "type": {
+                "type": "JSON_LITERAL",
+                "value": "section"
+            }
+        },
+        "slot": null,
+        "styles": null
+    },
+    {
+        "definition": {
+            "id": "d356d14b6e293a3020a244b63d278d8f",
+            "type": "MACROPONENT"
+        },
+        "elementId": "container_14",
+        "elementLabel": "Container 14",
+        "eventMappings": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "overrides": {
+            "composition": [
+                {
+                    "definition": {
+                        "id": "2d56f06d55f46bbd4e79b5e624beb940",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "rich_text_15",
+                    "elementLabel": "Rich text 15",
+                    "eventMappings": [],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "html": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "&lt;p&gt;&lt;span style=\"font-size: 12pt;\"&gt;&lt;strong&gt;/slack_incident&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;"
+                            }
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                },
+                {
+                    "definition": {
+                        "id": "d667a5e769598b2e5c6e92ebe73394f6",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "textarea_6",
+                    "elementLabel": "Textarea 6",
+                    "eventMappings": [
+                        {
+                            "eventMappingId": "cmbbggyffdddjjaabbggjjddbiiddiytbbieqc",
+                            "isConfiguration": false,
+                            "offRowStorageId": null,
+                            "sourceEventApiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                            "sourceEventCorrelationId": null,
+                            "sourceEventDefinition": {
+                                "apiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                                "id": null,
+                                "type": "UXEVENT"
+                            },
+                            "sourceEventSysId": null,
+                            "targets": [
+                                {
+                                    "broker": null,
+                                    "clientScript": null,
+                                    "conditional": null,
+                                    "declarativeAction": null,
+                                    "event": {
+                                        "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                        "payload": {
+                                            "container": {
+                                                "propName": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "slackEndpoint"
+                                                },
+                                                "value": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "value"
+                                                        ]
+                                                    },
+                                                    "type": "EVENT_PAYLOAD_BINDING"
+                                                }
+                                            },
+                                            "type": "MAP_CONTAINER"
+                                        },
+                                        "sysId": "32408b42ff7a10109046e490703bf176"
+                                    },
+                                    "operation": null,
+                                    "targetId": "cmbbggyffdddaaabbggaddbiiddjjdgfahhjs",
+                                    "type": "EVENT"
+                                }
+                            ]
+                        }
+                    ],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "autofocus": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "autoresize": {
+                            "type": "JSON_LITERAL",
+                            "value": true
+                        },
+                        "autoresizeRowsLimit": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "color": {
+                            "type": "JSON_LITERAL",
+                            "value": "initial"
+                        },
+                        "cols": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "configAria": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "disableMaxHeight": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "disabled": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "enableCaretSlot": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "fieldLayout": {
+                            "type": "JSON_LITERAL",
+                            "value": {
+                                "layout": "vertical"
+                            }
+                        },
+                        "helperContent": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "hideRequiredIndicator": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "invalid": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "label": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Slack Endpoint"
+                            }
+                        },
+                        "landmark": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "manageInvalid": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "manageValue": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "maxlength": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "messages": {
+                            "type": "JSON_LITERAL",
+                            "value": "[]"
+                        },
+                        "minlength": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "name": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "optional": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "placeholder": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "readonly": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "required": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "resize": {
+                            "type": "JSON_LITERAL",
+                            "value": "horizontal"
+                        },
+                        "rows": {
+                            "type": "JSON_LITERAL",
+                            "value": 1
+                        },
+                        "showCounter": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "size": {
+                            "type": "JSON_LITERAL",
+                            "value": "sm"
+                        },
+                        "value": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                },
+                {
+                    "definition": {
+                        "id": "d667a5e769598b2e5c6e92ebe73394f6",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "textarea_22",
+                    "elementLabel": "Textarea 22",
+                    "eventMappings": [
+                        {
+                            "eventMappingId": "cmbbggyffdddjjaabbggjjddbiiddiytbbieqc",
+                            "isConfiguration": false,
+                            "offRowStorageId": null,
+                            "sourceEventApiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                            "sourceEventCorrelationId": null,
+                            "sourceEventDefinition": {
+                                "apiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                                "id": null,
+                                "type": "UXEVENT"
+                            },
+                            "sourceEventSysId": null,
+                            "targets": [
+                                {
+                                    "broker": null,
+                                    "clientScript": null,
+                                    "conditional": null,
+                                    "declarativeAction": null,
+                                    "event": {
+                                        "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                        "payload": {
+                                            "container": {
+                                                "propName": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "slackIncident"
+                                                },
+                                                "value": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "value"
+                                                        ]
+                                                    },
+                                                    "type": "EVENT_PAYLOAD_BINDING"
+                                                }
+                                            },
+                                            "type": "MAP_CONTAINER"
+                                        },
+                                        "sysId": "32408b42ff7a10109046e490703bf176"
+                                    },
+                                    "operation": null,
+                                    "targetId": "cmbbggyffdddaaabbggaddbiiddjjdgfahhjs",
+                                    "type": "EVENT"
+                                }
+                            ]
+                        }
+                    ],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "autofocus": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "autoresize": {
+                            "type": "JSON_LITERAL",
+                            "value": true
+                        },
+                        "autoresizeRowsLimit": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "color": {
+                            "type": "JSON_LITERAL",
+                            "value": "initial"
+                        },
+                        "cols": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "configAria": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "disableMaxHeight": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "disabled": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "enableCaretSlot": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "fieldLayout": {
+                            "type": "JSON_LITERAL",
+                            "value": {
+                                "layout": "vertical"
+                            }
+                        },
+                        "helperContent": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "hideRequiredIndicator": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "invalid": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "label": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Incident"
+                            }
+                        },
+                        "landmark": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "manageInvalid": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "manageValue": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "maxlength": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "messages": {
+                            "type": "JSON_LITERAL",
+                            "value": "[]"
+                        },
+                        "minlength": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "name": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "optional": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "placeholder": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "readonly": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "required": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "resize": {
+                            "type": "JSON_LITERAL",
+                            "value": "horizontal"
+                        },
+                        "rows": {
+                            "type": "JSON_LITERAL",
+                            "value": 1
+                        },
+                        "showCounter": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "size": {
+                            "type": "JSON_LITERAL",
+                            "value": "sm"
+                        },
+                        "value": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": ""
+                            }
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                },
+                {
+                    "definition": {
+                        "id": "d37ce8abca89d02905fed903c8e34d8e",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "slack_incident_button",
+                    "elementLabel": "Slack Test",
+                    "eventMappings": [
+                        {
+                            "eventMappingId": "cmbbggxccfsddaaaaydddbiiddgijoffwuf",
+                            "isConfiguration": false,
+                            "offRowStorageId": null,
+                            "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                            "sourceEventCorrelationId": null,
+                            "sourceEventDefinition": {
+                                "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                "id": null,
+                                "type": "UXEVENT"
+                            },
+                            "sourceEventSysId": null,
+                            "targets": [
+                                {
+                                    "broker": null,
+                                    "clientScript": {
+                                        "payload": {
+                                            "type": "JSON_LITERAL",
+                                            "value": {}
+                                        },
+                                        "sysId": "0ec7f64083301e10ad2271d6feaad38e"
+                                    },
+                                    "conditional": null,
+                                    "declarativeAction": null,
+                                    "event": null,
+                                    "operation": null,
+                                    "targetId": "cmbbggxccfsddaaaayeddbiiddxuixhbbaan",
+                                    "type": "CLIENT_SCRIPT"
+                                }
+                            ]
+                        }
+                    ],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "configAria": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "disabled": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "icon": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "label": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Execute API"
+                            }
+                        },
+                        "landmark": {
+                            "type": "JSON_LITERAL",
+                            "value": null
+                        },
+                        "size": {
+                            "type": "JSON_LITERAL",
+                            "value": "md"
+                        },
+                        "tooltipContent": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Pretty self-explanatory..."
+                            }
+                        },
+                        "variant": {
+                            "type": "JSON_LITERAL",
+                            "value": "primary"
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                }
+            ],
+            "layout": {
+                "default": {
+                    "children": null,
+                    "items": [
+                        {
+                            "element_id": "rich_text_15",
+                            "styles": {
+                                "padding-left": "var(--now-scalable-space--3xl)",
+                                "padding-right": "var(--now-scalable-space--3xl)"
+                            }
+                        },
+                        {
+                            "element_id": "textarea_6",
+                            "styles": {
+                                "padding-left": "var(--now-scalable-space--3xl)",
+                                "padding-right": "var(--now-scalable-space--3xl)"
+                            }
+                        },
+                        {
+                            "element_id": "textarea_22",
+                            "styles": {
+                                "padding-left": "var(--now-scalable-space--3xl)",
+                                "padding-right": "var(--now-scalable-space--3xl)"
+                            }
+                        },
+                        {
+                            "element_id": "slack_incident_button",
+                            "styles": {
+                                "padding-left": "var(--now-scalable-space--3xl)",
+                                "padding-right": "var(--now-scalable-space--3xl)",
+                                "padding-top": "var(--now-scalable-space--sm)"
+                            }
+                        }
+                    ],
+                    "root": null,
+                    "rules": null,
+                    "styles": {
+                        "flex-direction": "row",
+                        "padding-bottom": "var(--now-scalable-space--3xl)",
+                        "padding-top": "var(--now-scalable-space--3xl)",
+                        "width": "100%"
+                    },
+                    "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                    "type": "flex"
+                },
+                "version": "3.0.0"
+            }
+        },
+        "preset": null,
+        "propertyValues": {
+            "ariaRegionHeadingLevel": {
+                "type": "JSON_LITERAL",
+                "value": "1"
+            },
+            "ariaRegionName": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": ""
+                }
+            },
+            "ariaRole": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "hideEmptyStateUi": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "includeAriaHeading": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "slotWrapperBehavior": {
+                "type": "JSON_LITERAL",
+                "value": "fullheight"
+            },
+            "type": {
+                "type": "JSON_LITERAL",
+                "value": "section"
+            }
+        },
+        "slot": null,
+        "styles": null
+    },
+    {
+        "definition": {
+            "id": "d356d14b6e293a3020a244b63d278d8f",
+            "type": "MACROPONENT"
+        },
         "elementId": "container_13",
         "elementLabel": "Container 13",
         "eventMappings": [],
@@ -5155,6 +6167,154 @@
                     "code": null,
                     "comment": "",
                     "message": "SMS sent"
+                }
+            },
+            "preventDefaultAction": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "resizableMaxHeight": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMaxWidth": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMinHeight": {
+                "type": "JSON_LITERAL",
+                "value": 133
+            },
+            "resizableMinWidth": {
+                "type": "JSON_LITERAL",
+                "value": 420
+            },
+            "size": {
+                "type": "JSON_LITERAL",
+                "value": "md"
+            }
+        },
+        "slot": null,
+        "styles": null
+    },
+    {
+        "definition": {
+            "id": "05d8b1515b230010b913cbd59b81c71a",
+            "type": "MACROPONENT"
+        },
+        "elementId": "test_slack_response",
+        "elementLabel": "Test Slack Response",
+        "eventMappings": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "preset": null,
+        "propertyValues": {
+            "buttonLabel": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Unreal!"
+                }
+            },
+            "content": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Requested Slack message has been sent."
+                }
+            },
+            "defer": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableResizable": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "headerLabel": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Slack message sent"
+                }
+            },
+            "preventDefaultAction": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "resizableMaxHeight": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMaxWidth": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMinHeight": {
+                "type": "JSON_LITERAL",
+                "value": 133
+            },
+            "resizableMinWidth": {
+                "type": "JSON_LITERAL",
+                "value": 420
+            },
+            "size": {
+                "type": "JSON_LITERAL",
+                "value": "md"
+            }
+        },
+        "slot": null,
+        "styles": null
+    },
+    {
+        "definition": {
+            "id": "05d8b1515b230010b913cbd59b81c71a",
+            "type": "MACROPONENT"
+        },
+        "elementId": "slack_incident_response",
+        "elementLabel": "Slack Incident Response",
+        "eventMappings": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "preset": null,
+        "propertyValues": {
+            "buttonLabel": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Tubular"
+                }
+            },
+            "content": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Requested Slack message has been sent."
+                }
+            },
+            "defer": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableResizable": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "headerLabel": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Slack sent"
                 }
             },
             "preventDefaultAction": {
@@ -5719,6 +6879,12 @@
         "children": null,
         "items": [
             {
+                "element_id": "alert_1"
+            },
+            {
+                "element_id": "alert_1"
+            },
+            {
                 "element_id": "container_12",
                 "styles": {
                     "align-self": "center",
@@ -5794,6 +6960,14 @@
                 "styles": {}
             },
             {
+                "element_id": "container_15",
+                "styles": {}
+            },
+            {
+                "element_id": "container_14",
+                "styles": {}
+            },
+            {
                 "element_id": "container_13",
                 "styles": {
                     "align-self": "center"
@@ -5840,6 +7014,12 @@
   "comment" : ""
 }, {
   "message" : "&lt;p&gt;&lt;span style=\"font-size: 12pt;\"&gt;&lt;strong&gt;/send_sms&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;",
+  "comment" : ""
+}, {
+  "message" : "&lt;p&gt;&lt;span style=\"font-size: 12pt;\"&gt;&lt;strong&gt;/slack_incident&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;",
+  "comment" : ""
+}, {
+  "message" : "&lt;p&gt;&lt;span style=\"font-size: 12pt;\"&gt;&lt;strong&gt;/slack_test&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;",
   "comment" : ""
 }, {
   "message" : "&lt;p&gt;&lt;span style=\"font-size: 12pt;\"&gt;&lt;strong&gt;/trigger_flow&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;",
@@ -5899,6 +7079,9 @@
   "message" : "I can't believe it",
   "comment" : ""
 }, {
+  "message" : "Incident",
+  "comment" : ""
+}, {
   "message" : "Mobile push created",
   "comment" : ""
 }, {
@@ -5932,6 +7115,9 @@
   "message" : "Requested SMS has been sent.",
   "comment" : ""
 }, {
+  "message" : "Requested Slack message has been sent.",
+  "comment" : ""
+}, {
   "message" : "Requested phone call has been placed.",
   "comment" : ""
 }, {
@@ -5939,6 +7125,15 @@
   "comment" : ""
 }, {
   "message" : "Short Description",
+  "comment" : ""
+}, {
+  "message" : "Slack Endpoint",
+  "comment" : ""
+}, {
+  "message" : "Slack message sent",
+  "comment" : ""
+}, {
+  "message" : "Slack sent",
   "comment" : ""
 }, {
   "message" : "So good",
@@ -5962,6 +7157,9 @@
   "message" : "This is an example of helper text.",
   "comment" : ""
 }, {
+  "message" : "Tubular",
+  "comment" : ""
+}, {
   "message" : "Type",
   "comment" : ""
 }, {
@@ -5972,6 +7170,9 @@
   "comment" : ""
 }, {
   "message" : "Type C",
+  "comment" : ""
+}, {
+  "message" : "Unreal!",
   "comment" : ""
 }, {
   "message" : "Wonderful",
@@ -6073,20 +7274,34 @@
         "name": "smsPhoneNumber",
         "shape": "",
         "valueType": "string"
+    },
+    {
+        "id": "",
+        "initialValue": null,
+        "name": "slackEndpoint",
+        "shape": "",
+        "valueType": "string"
+    },
+    {
+        "id": "",
+        "initialValue": null,
+        "name": "slackIncident",
+        "shape": "",
+        "valueType": "string"
     }
 ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-17 20:48:48</sys_created_on>
         <sys_id>38c7328083301e10ad2271d6feaad3d7</sys_id>
-        <sys_mod_count>118</sys_mod_count>
+        <sys_mod_count>135</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ux_macroponent_38c7328083301e10ad2271d6feaad3d7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-23 16:34:53</sys_updated_on>
+        <sys_updated_on>2024-09-25 17:07:03</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=38c7328083301e10ad2271d6feaad3d7"/>
 </record_update>
