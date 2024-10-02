@@ -10,19 +10,21 @@
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
     var slackEndpoint = request.body.data.endpoint;
-	var incident = request.body.data.incident;
+    var incidentNum = request.body.data.incident;
 
-	var incGR = new GlideRecord('incident');
-	incGR.get('number', incident);
+    var incident = new global.GlideQuery('incident')
+        .where('number', incidentNum)
+        .selectOne('assigned_to.user_name', 'assigned_to$DISPLAY', 'assigned_to.sys_id')
+        .get();
 
-	var assignee = incGR.assigned_to.getDisplayValue();
-	var username = incGR.assigned_to.user_name.toString();
-	var incLink = 'https://' + gs.getProperty('instance_name') + '.service-now.com/incident.do?sys_id=' + incGR.sys_id;
-	var userLink = 'https://' + gs.getProperty('instance_name') + '.service-now.com/sys_user.do?sys_id=' + incGR.assigned_to.sys_id;
+    var assignee = incident.assigned_to$DISPLAY.toString();
+    var username = incident.assigned_to.user_name.toString();
+    var incLink = 'https://' + gs.getProperty('instance_name') + '.service-now.com/incident.do?sys_id=' + incident.sys_id;
+    var userLink = 'https://' + gs.getProperty('instance_name') + '.service-now.com/sys_user.do?sys_id=' + incident.assigned_to.sys_id;
 
     var r = new sn_ws.RESTMessageV2('Slack', 'POST');
 
-	r.setRequestBody('{"text":"Incident <' + incLink + '|' + incident + '> is assigned to: ' + assignee + ' (<' + userLink + '|' + username + '>)"}');
+    r.setRequestBody('{"text":"Incident <' + incLink + '|' + incidentNum + '> is assigned to: ' + assignee + ' (<' + userLink + '|' + username + '>)"}');
 
     r.setStringParameter('endpoint', slackEndpoint);
     r.execute();
@@ -41,14 +43,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-19 15:06:27</sys_created_on>
         <sys_id>959c3364837c9e10ad2271d6feaad33f</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Slack Incident</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ws_operation_959c3364837c9e10ad2271d6feaad33f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-19 15:47:27</sys_updated_on>
+        <sys_updated_on>2024-10-02 22:06:18</sys_updated_on>
         <web_service_definition display_value="Scripted REST API Examples">d9e40ab283285610ad2271d6feaad37c</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

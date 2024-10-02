@@ -11,32 +11,36 @@
 
     //Sends an on-call push notification to a user allowing them to accept or reject assignment. Must have ITSM Mobile Agent plugin installed first, then log into mobile app for your instance.
 
-	//If you run into any issues, check the on_call_push_request table and ensure the acceptor and document_id fields are properly filled in. If not, double check your username and incident numbers.
+    //If you run into any issues, check the on_call_push_request table and ensure the acceptor and document_id fields are properly filled in. If not, double check your username and incident numbers.
 
     (function() {
 
         try {
 
-			var acceptor = request.body.data.acceptor.toString();
-			var incident = request.body.data.number.toString();
+            var acceptor = request.body.data.acceptor.toString();
+            var incidentNum = request.body.data.number.toString();
 
-			var userGr = new GlideRecord('sys_user');
-			userGr.get('user_name', acceptor);
-			var userSysID = userGr.sys_id;
+            var user = new global.GlideQuery('sys_user')
+                .where('user_name', acceptor)
+                .selectOne()
+                .get();
+            var userSysID = user.sys_id;
 
-			var incidentGr = new GlideRecord('incident');
-			incidentGr.get('number', incident);
-			var incidentSysID = incidentGr.sys_id;
+            var incident = new global.GlideQuery('incident')
+                .where('number', incidentNum)
+                .selectOne()
+                .get();
+            var incidentSysID = incident.sys_id;
 
-            var gr = new GlideRecord('on_call_push_request');
-            gr.newRecord();
-            gr.setValue('acceptor', userSysID);
-            gr.setValue('state', 'requested');
-            gr.setValue('source_table', 'incident');
-            gr.setValue('document_id', incidentSysID);
-            gr.setValue('active', true);
-            gr.setValue('iteration', '1');
-            gr.insert();
+            var push = new global.GlideQuery('on_call_push_request')
+                .insert({
+                    acceptor: userSysID,
+                    state: 'requested',
+                    source_table: 'incident',
+                    document_id: incidentSysID,
+                    active: true,
+                    iteration: 1
+                });
 
             var resBody = {};
             resBody.information = "Mobile push successfully created.";
@@ -63,14 +67,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-17 19:05:19</sys_created_on>
         <sys_id>4910aa88837cda10ad2271d6feaad344</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>on_call_push_notification</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ws_operation_4910aa88837cda10ad2271d6feaad344</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-17 19:37:45</sys_updated_on>
+        <sys_updated_on>2024-10-02 20:13:58</sys_updated_on>
         <web_service_definition display_value="Scripted REST API Examples">d9e40ab283285610ad2271d6feaad37c</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

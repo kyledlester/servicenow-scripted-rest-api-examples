@@ -13,12 +13,13 @@
     let description = request.body.data.description;
     let type = request.body.data.type;
 
-    var create = new GlideRecord('x_0294_rest_api_scripted_rest_api_basic_app');
-    create.initialize();
-    create.setValue('short_description', shortDescription);
-    create.setValue('description', description);
-    create.setValue('type', type);
-    create.insert();
+	var create = new global.GlideQuery('x_0294_rest_api_scripted_rest_api_basic_app')
+	.insert({
+		short_description: shortDescription.toString(),
+		description: description.toString(),
+		type: type
+	})
+	.get();
 
     response.setStatus('201');
     response.setContentType('application/json');
@@ -44,14 +45,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-13 21:05:00</sys_created_on>
         <sys_id>a9059af683685610ad2271d6feaad3ec</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>create_record</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ws_operation_a9059af683685610ad2271d6feaad3ec</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-13 21:05:00</sys_updated_on>
+        <sys_updated_on>2024-10-02 16:50:52</sys_updated_on>
         <web_service_definition display_value="Scripted REST API Examples">d9e40ab283285610ad2271d6feaad37c</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

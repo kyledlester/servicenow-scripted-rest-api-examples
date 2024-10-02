@@ -9,17 +9,15 @@
         <name>delete_type</name>
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
-	let type = request.body.data.type;
+    let type = request.body.data.type;
 
-    var deleteRecords = new GlideRecord('x_0294_rest_api_scripted_rest_api_basic_app');
-	deleteRecords.query();
-	let count = 0;
-	while (deleteRecords.next()) {
-		if (deleteRecords.type == type) {
-		deleteRecords.deleteRecord();
-		count++;
-		}
-	}
+	var count = new global.GlideQuery('x_0294_rest_api_scripted_rest_api_basic_app')
+	.where('type', type)
+	.count();
+
+    var deleteRecords = new global.GlideQuery('x_0294_rest_api_scripted_rest_api_basic_app')
+		.where('type', type)
+        .deleteMultiple();
 
     response.setStatus('200');
     response.setContentType('application/json');
@@ -42,14 +40,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-13 20:34:35</sys_created_on>
         <sys_id>2d2e82fe83285610ad2271d6feaad395</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>delete_type</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ws_operation_2d2e82fe83285610ad2271d6feaad395</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-13 21:02:07</sys_updated_on>
+        <sys_updated_on>2024-10-02 19:50:24</sys_updated_on>
         <web_service_definition display_value="Scripted REST API Examples">d9e40ab283285610ad2271d6feaad37c</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
