@@ -6,17 +6,28 @@
         <default_operation_uri/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
         <http_method>POST</http_method>
-        <name>Slack Test</name>
+        <name>slack_test</name>
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
-    var slackEndpoint = request.body.data.endpoint;
+    try {
+        var slackEndpoint = request.body.data.endpoint;
 
-	var gdt = new GlideDateTime();
-    var r = new sn_ws.RESTMessageV2('Slack', 'POST');
+        var gdt = new GlideDateTime();
+        var r = new sn_ws.RESTMessageV2('Slack', 'POST');
 
-    r.setRequestBody('{"text":"Slack testing - ' + gdt + ' "}');
-    r.setStringParameter('endpoint', slackEndpoint);
-    r.execute();
+        r.setRequestBody('{"text":"Slack testing - ' + gdt + ' "}');
+        r.setStringParameter('endpoint', slackEndpoint);
+        r.execute();
+
+        response.setStatus('200');
+        response.setContentType('application/json');
+
+        var resBody = {};
+        resBody.information = "Slack message sent.";
+        response.setBody(resBody);
+    } catch (err) {
+        gs.error('Unable to complete slack_test operation.');
+    }
 
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_0294_rest_api/scripted_rest_api_examples/slack_test</operation_uri>
@@ -32,14 +43,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-19 15:01:18</sys_created_on>
         <sys_id>34ea7724837c9e10ad2271d6feaad3b4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Slack Test</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>slack_test</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ws_operation_34ea7724837c9e10ad2271d6feaad3b4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-19 15:06:18</sys_updated_on>
+        <sys_updated_on>2024-10-02 22:19:39</sys_updated_on>
         <web_service_definition display_value="Scripted REST API Examples">d9e40ab283285610ad2271d6feaad37c</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

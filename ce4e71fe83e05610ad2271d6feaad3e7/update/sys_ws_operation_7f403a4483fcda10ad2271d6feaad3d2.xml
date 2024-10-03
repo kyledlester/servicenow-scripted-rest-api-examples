@@ -9,35 +9,31 @@
         <name>send_call</name>
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
-	//For this to work, you will need to have installed the Notify and Twilio plugins, configured Twilio Direct Configuration in ServiceNow, and completed any necessary regulatory compliance in your Twilio console.
+    //For this to work, you will need to have installed the Notify and Twilio plugins, configured Twilio Direct Configuration in ServiceNow, and completed any necessary regulatory compliance in your Twilio console.
 
-    (function() {
+    try {
 
-        try {
+        var phoneNumber = request.body.data.phone_number;
 
-			var phoneNumber = request.body.data.phone_number;
+        var workflow = new global.Workflow();
+        var workflowId = workflow.getWorkflowFromName('Make a phone call');
 
-            var workflow = new global.Workflow();
-            var workflowId = workflow.getWorkflowFromName('Make a phone call');
+        var vars = {};
+        vars.u_phone_number = phoneNumber;
 
-            var vars = {};
-            vars.u_phone_number = phoneNumber;
+        workflow.startFlow(workflowId, null, null, vars);
 
-            workflow.startFlow(workflowId, null, null, vars);
+        response.setStatus('200');
+        response.setContentType('application/json');
 
-            response.setStatus('200');
-            response.setContentType('application/json');
+        var resBody = {};
+        resBody.information = "Make a phone call successfully executed.";
+        response.setBody(resBody);
 
-            var resBody = {};
-            resBody.information = "Make a phone call successfully executed.";
-            response.setBody(resBody);
-
-        } catch (ex) {
-            var message = ex.getMessage();
-            gs.error(message);
-        }
-
-    })();
+    } catch (err) {
+        gs.error('Unable to complete send_call operation.');
+		new sn_ws_err.BadRequestError('Unable to complete send_call operation');
+    }
 
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_0294_rest_api/scripted_rest_api_examples/send_call</operation_uri>
@@ -53,14 +49,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-17 20:16:14</sys_created_on>
         <sys_id>7f403a4483fcda10ad2271d6feaad3d2</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>send_call</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ws_operation_7f403a4483fcda10ad2271d6feaad3d2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-17 20:36:39</sys_updated_on>
+        <sys_updated_on>2024-10-02 22:28:55</sys_updated_on>
         <web_service_definition display_value="Scripted REST API Examples">d9e40ab283285610ad2271d6feaad37c</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

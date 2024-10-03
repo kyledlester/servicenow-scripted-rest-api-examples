@@ -9,8 +9,6 @@
         <name>trigger_flow</name>
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
-    (function() {
-
         try {
             var flow = request.body.data.flow; //Flow name should be in scope.name format; for example, "x_0294_rest_api.hello_world_flow".
 
@@ -26,12 +24,10 @@
             resBody.information = "ServiceNow flow " + flow + " successfully executed.";
             response.setBody(resBody);
 
-        } catch (ex) {
-            var message = ex.getMessage();
-            gs.error(message);
+        } catch (err) {
+            gs.error('Unable to complete trigger_flow operation.');
+			new sn_ws.err('Unable to complete trigger_flow operation.');
         }
-
-    })();
 
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_0294_rest_api/scripted_rest_api_examples/trigger_flow</operation_uri>
@@ -47,14 +43,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-17 17:32:28</sys_created_on>
         <sys_id>832a4a0483f8da10ad2271d6feaad3e3</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>trigger_flow</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ws_operation_832a4a0483f8da10ad2271d6feaad3e3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-09-17 18:12:03</sys_updated_on>
+        <sys_updated_on>2024-10-03 17:23:03</sys_updated_on>
         <web_service_definition display_value="Scripted REST API Examples">d9e40ab283285610ad2271d6feaad37c</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

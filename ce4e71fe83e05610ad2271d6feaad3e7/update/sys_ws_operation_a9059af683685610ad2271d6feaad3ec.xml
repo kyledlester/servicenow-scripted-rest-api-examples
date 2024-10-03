@@ -9,6 +9,7 @@
         <name>create_record</name>
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
+	try {
     let shortDescription = request.body.data.short_description;
     let description = request.body.data.description;
     let type = request.body.data.type;
@@ -28,6 +29,10 @@
     resBody.information = "Record successfully created.";
     resBody.sys_id = create.sys_id.toString();
     response.setBody(resBody);
+	} catch (err) {
+		gs.error('Unable to complete create_record operation.');
+		new sn_ws_err.BadRequestError('Unable to complete create_record operation.');
+	}
 
 
 
@@ -45,14 +50,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-09-13 21:05:00</sys_created_on>
         <sys_id>a9059af683685610ad2271d6feaad3ec</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>create_record</sys_name>
         <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Scripted REST API Examples">ce4e71fe83e05610ad2271d6feaad3e7</sys_scope>
         <sys_update_name>sys_ws_operation_a9059af683685610ad2271d6feaad3ec</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-10-02 16:50:52</sys_updated_on>
+        <sys_updated_on>2024-10-02 22:21:29</sys_updated_on>
         <web_service_definition display_value="Scripted REST API Examples">d9e40ab283285610ad2271d6feaad37c</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
