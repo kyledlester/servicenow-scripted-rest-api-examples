@@ -143,7 +143,7 @@
     </wf_activity>
     <sys_variable_value action="delete_multiple" query="document_key=63f1328883fcda10ad2271d6feaad308"/>
     <wf_activity action="INSERT_OR_UPDATE">
-        <activity_definition display_value="Call">27539480bf200200216a85ce2c073924</activity_definition>
+        <activity_definition display_value="">27539480bf200200216a85ce2c073924</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
         <databus_lookup_id>3</databus_lookup_id>
         <height/>
@@ -183,7 +183,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:23:36</sys_updated_on>
         <value>+13853134978</value>
-        <variable display_value="Phone number to call">75e4d480bf200200216a85ce2c073941</variable>
+        <variable display_value="">75e4d480bf200200216a85ce2c073941</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -197,7 +197,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:23:36</sys_updated_on>
         <value>${current.getTableName()}</value>
-        <variable display_value="Source Table">52037c8f3b300300c68fe9b534efc479</variable>
+        <variable display_value="">52037c8f3b300300c68fe9b534efc479</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -211,7 +211,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:23:36</sys_updated_on>
         <value>${current.sys_id}</value>
-        <variable display_value="Source Sys Id">05cfbbaa3b300300c68fe9b534efc41d</variable>
+        <variable display_value="">05cfbbaa3b300300c68fe9b534efc41d</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -225,7 +225,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:24:47</sys_updated_on>
         <value>1</value>
-        <variable display_value="Advanced">68b4ecb1bf300200216a85ce2c0739f1</variable>
+        <variable display_value="">68b4ecb1bf300200216a85ce2c0739f1</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -287,7 +287,7 @@ function getNotifyNumber() {&#13;
 &#13;
     return null;&#13;
 }</value>
-        <variable display_value="Script">07c660f1bf300200216a85ce2c0739cd</variable>
+        <variable display_value="">07c660f1bf300200216a85ce2c0739cd</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -301,7 +301,7 @@ function getNotifyNumber() {&#13;
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:23:36</sys_updated_on>
         <value>4fbdaec083fcda10ad2271d6feaad3fd</value>
-        <variable display_value="Notify Number">dc169880bf200200216a85ce2c073967</variable>
+        <variable display_value="">dc169880bf200200216a85ce2c073967</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -315,7 +315,7 @@ function getNotifyNumber() {&#13;
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:23:36</sys_updated_on>
         <value>4fbdaec083fcda10ad2271d6feaad3fd</value>
-        <variable display_value="Notify Number">dc169880bf200200216a85ce2c073967</variable>
+        <variable display_value="">dc169880bf200200216a85ce2c073967</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -329,7 +329,7 @@ function getNotifyNumber() {&#13;
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:23:36</sys_updated_on>
         <value>+13853134978</value>
-        <variable display_value="Phone number to call">75e4d480bf200200216a85ce2c073941</variable>
+        <variable display_value="">75e4d480bf200200216a85ce2c073941</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -343,7 +343,7 @@ function getNotifyNumber() {&#13;
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:23:36</sys_updated_on>
         <value>${current.sys_id}</value>
-        <variable display_value="Source Sys Id">05cfbbaa3b300300c68fe9b534efc41d</variable>
+        <variable display_value="">05cfbbaa3b300300c68fe9b534efc41d</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -357,7 +357,7 @@ function getNotifyNumber() {&#13;
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:23:36</sys_updated_on>
         <value>${current.getTableName()}</value>
-        <variable display_value="Source Table">52037c8f3b300300c68fe9b534efc479</variable>
+        <variable display_value="">52037c8f3b300300c68fe9b534efc479</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -371,7 +371,7 @@ function getNotifyNumber() {&#13;
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-09-17 20:24:47</sys_updated_on>
         <value>1</value>
-        <variable display_value="Advanced">68b4ecb1bf300200216a85ce2c0739f1</variable>
+        <variable display_value="">68b4ecb1bf300200216a85ce2c0739f1</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -433,7 +433,7 @@ function getNotifyNumber() {&#13;
 &#13;
     return null;&#13;
 }</value>
-        <variable display_value="Script">07c660f1bf300200216a85ce2c0739cd</variable>
+        <variable display_value="">07c660f1bf300200216a85ce2c0739cd</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Make a call">27f1328883fcda10ad2271d6feaad309</activity>
@@ -572,7 +572,7 @@ function getNotifyNumber() {&#13;
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2024-09-17 20:24:07</sys_created_on>
-            <sys_id>d712f28883fcda10ad2271d6feaad3ba</sys_id>
+            <sys_id>0cb16230c35d2210e7d2ffbc05013163</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Phone Number</sys_name>
             <sys_package display_value="Scripted REST API Examples" source="x_0294_rest_api">ce4e71fe83e05610ad2271d6feaad3e7</sys_package>
